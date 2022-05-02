@@ -51,7 +51,7 @@ public:
 	void Render();
 	void Enter();
 	void Exit();
-	void Resume() { cout << "Resuming Game..." << endl; }
+	void Resume() { cout << "Resuming Game.." << endl; }
 
 	bool checkEndGame();
 	void SpawnPowerUp();
