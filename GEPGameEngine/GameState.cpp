@@ -113,7 +113,7 @@ void GameState::Enter()
 	lifePtsSpriteTex = Game::Instance()->LoadTexture("sprites/heartsprite.png");
 	hbarSpriteTex = Game::Instance()->LoadTexture("sprites/health_sprite.png");
 
-	gFont = TTF_OpenFont("game_over.ttf", 56);
+	gFont = TTF_OpenFont("Font/game_over.ttf", 56);
 
 	bgSrcRect.x = bgSrcRect.y = 0;
 	SDL_QueryTexture(bgSpriteTex, NULL, NULL, &bgSrcRect.w, &bgSrcRect.h);
@@ -281,8 +281,6 @@ void GameState::Render()
 }
 
 void GameState::SpawnAsteroid() {
-	cout << "1." << astTex.size() << "\n";
-
 	if ((int)asteroids.size() < 8) {
 		SDL_Rect asteroidSrcRect;
 		SDL_Rect asteroidDestRect;
@@ -360,9 +358,6 @@ void GameState::SpawnAsteroid() {
 			}
 		}
 	}
-
-	cout << "2." << asteroids.size() << "\n";
-
 }
 
 void GameState::playerRespawn(Player* p) {
